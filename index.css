@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base:{
+   body{
+    @apply font-poppins
+   },
+
+    h1,h2,,h3,h4,h5,h6{
+        @apply font-roboto
+    } 
+}
+
+@layer components{
+    .size-selector input:checked + label{
+        @apply bg-primary text-white;
+    }
+
+    .color-selector input:checked + label{
+        @apply ring-2 ring-primary;
+    }
+
+    .input-box {
+        @apply w-full  border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400
+    }
+  
+    .input-range input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-ms-track,
+input[type=range]::-moz-range-track{
+    @apply bg-custom !important
+}
+.input-range input[type=range]::-moz-range-thumb,
+input[type=range]::-ms-thumb,
+input[type=range]::-webkit-slider-thumb{
+    @apply bg-custom !important
+}
+}
